@@ -1,0 +1,110 @@
+{
+  "nav": {
+    "home": "首页",
+    "products": "产品中心",
+    "about": "关于我们",
+    "contact": "联系我们"
+  },
+  "hero": {
+    "badge": "专业音响解决方案",
+    "title": "卓越音质，",
+    "titleHighlight": "专业品质之选",
+    "subtitle": "我们专业制造高性能音箱、功放及音响系统，产品远销全球50余个国家。",
+    "cta": "浏览产品",
+    "ctaSecondary": "联系我们"
+  },
+  "products": {
+    "title": "产品中心",
+    "subtitle": "精工制造，覆盖各类专业音响应用场景",
+    "viewAll": "查看全部产品",
+    "viewDetails": "查看详情",
+    "items": [
+      { "id": "pro-speaker", "name": "专业系列音箱", "desc": "高保真全频音箱，适用于专业舞台及录音室。", "tag": "热销" },
+      { "id": "subwoofer", "name": "超低音系统", "desc": "深沉有力的低频响应，适合现场演出及工程安装。", "tag": "新品" },
+      { "id": "amplifier", "name": "专业功率放大器", "desc": "D类功放，高效率、超低失真。", "tag": "" },
+      { "id": "column-speaker", "name": "线阵列音柱", "desc": "纤薄线阵设计，适用于会议室及礼拜场所。", "tag": "" },
+      { "id": "monitor", "name": "监听音箱", "desc": "平坦频响，精准混音与母带处理。", "tag": "" },
+      { "id": "pa-system", "name": "便携PA系统", "desc": "一体化便携方案，适合户外活动及演讲。", "tag": "热门" }
+    ]
+  },
+  "about": {
+    "title": "关于我们",
+    "subtitle": "15年以上专业音响制造经验",
+    "desc1": "声核音响成立于2009年，是位于广东的专业音响设备领先制造商。",
+    "desc2": "我们的现代化工厂占地20,000平方米，配备先进研发设施，确保每件产品达到最高品质标准。",
+    "stats": [
+      { "value": "15+", "label": "年行业经验" },
+      { "value": "50+", "label": "覆盖国家" },
+      { "value": "500+", "label": "产品型号" },
+      { "value": "OEM/ODM", "label": "定制服务" }
+    ],
+    "learnMore": "了解更多"
+  },
+  "contact": {
+    "title": "联系我们",
+    "subtitle": "欢迎随时与我们沟通您的音响需求。",
+    "name": "您的姓名",
+    "email": "电子邮箱",
+    "message": "留言内容",
+    "send": "发送消息",
+    "info": {
+      "address": "中国广东省广州市工业大道88号",
+      "phone": "+86 020-1234-5678",
+      "emailAddr": "info@soundcore-audio.com",
+      "hours": "周一至周五：9:00 - 18:00"
+    }
+  },
+  "footer": {
+    "desc": "专业音响设备制造商，产品远销全球。",
+    "links": "快速导航",
+    "copyright": "© 2024 声核音响 版权所有"
+  },
+  "aboutPage": {
+    "hero": "关于声核音响",
+    "heroSub": "您值得信赖的专业音响合作伙伴",
+    "story": "品牌故事",
+    "storyText1": "声核音响于2009年在广州成立，致力于以具竞争力的价格提供世界级音响设备。",
+    "storyText2": "产品涵盖专业音箱、超低音、功放、线阵列及完整PA系统，服务全球50余个国家。",
+    "storyText3": "通过ISO 9001认证，产品符合CE/FCC/RoHS国际标准。",
+    "factory": "生产基地",
+    "factoryItems": [
+      "20,000平方米现代化生产基地",
+      "先进声学测试实验室",
+      "自动化SMT生产线",
+      "严格品控，100%老化测试",
+      "支持OEM/ODM定制贴牌"
+    ],
+    "whyUs": "为什么选择我们",
+    "whyItems": [
+      { "title": "研发驱动", "desc": "50余名工程师专注声学创新" },
+      { "title": "品质优先", "desc": "ISO 9001认证，CE/FCC/RoHS合规" },
+      { "title": "全球覆盖", "desc": "服务50余国，物流稳定可靠" },
+      { "title": "定制服务", "desc": "全面OEM/ODM支持，助力您的品牌" }
+    ]
+  },
+  "productsPage": {
+    "hero": "产品中心",
+    "heroSub": "完整的专业音响产品线",
+    "all": "全部",
+    "speakers": "音箱",
+    "amplifiers": "功放",
+    "systems": "系统"
+  },
+  "contactPage": {
+    "hero": "联系我们",
+    "heroSub": "期待与您合作",
+    "formTitle": "发送消息",
+    "infoTitle": "联系方式",
+    "subject": "主题",
+    "company": "公司名称",
+    "send": "发送消息",
+    "success": "消息已发送！我们将在24小时内回复您。",
+    "faqTitle": "常见问题",
+    "faqs": [
+      { "q": "是否提供OEM/ODM服务？", "a": "是的，我们提供完整的OEM/ODM支持，包括定制品牌和包装。" },
+      { "q": "最小起订量是多少？", "a": "标准产品一般50-100件，OEM订单可适当降低。" },
+      { "q": "产品有哪些认证？", "a": "CE、FCC、RoHS及ISO 9001认证。" },
+      { "q": "交货期多久？", "a": "标准产品15-25天，OEM/定制产品30-45天。" }
+    ]
+  }
+}

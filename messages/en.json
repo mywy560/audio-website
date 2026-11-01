@@ -1,0 +1,110 @@
+{
+  "nav": {
+    "home": "Home",
+    "products": "Products",
+    "about": "About Us",
+    "contact": "Contact"
+  },
+  "hero": {
+    "badge": "Professional Audio Solutions",
+    "title": "Premium Sound,",
+    "titleHighlight": "Engineered for Excellence",
+    "subtitle": "We manufacture high-performance speakers, amplifiers, and audio systems trusted by professionals worldwide.",
+    "cta": "Explore Products",
+    "ctaSecondary": "Contact Us"
+  },
+  "products": {
+    "title": "Our Products",
+    "subtitle": "Precision-crafted audio equipment for every application",
+    "viewAll": "View All Products",
+    "viewDetails": "View Details",
+    "items": [
+      { "id": "pro-speaker", "name": "Pro Series Speaker", "desc": "High-fidelity full-range speaker for professional stage and studio use.", "tag": "Best Seller" },
+      { "id": "subwoofer", "name": "Subwoofer System", "desc": "Deep, powerful bass response for live events and installations.", "tag": "New" },
+      { "id": "amplifier", "name": "Power Amplifier", "desc": "Class-D amplifier with high efficiency and ultra-low distortion.", "tag": "" },
+      { "id": "column-speaker", "name": "Column Array Speaker", "desc": "Slim line array design for conference rooms and houses of worship.", "tag": "" },
+      { "id": "monitor", "name": "Studio Monitor", "desc": "Flat frequency response for accurate mixing and mastering.", "tag": "" },
+      { "id": "pa-system", "name": "Portable PA System", "desc": "All-in-one portable solution for outdoor events and presentations.", "tag": "Popular" }
+    ]
+  },
+  "about": {
+    "title": "About Us",
+    "subtitle": "15+ years of audio engineering excellence",
+    "desc1": "Founded in 2009, SoundCore Audio is a leading manufacturer of professional audio equipment based in Guangdong, China.",
+    "desc2": "Our state-of-the-art factory covers 20,000 m² with advanced R&D facilities, ensuring every product meets the highest standards.",
+    "stats": [
+      { "value": "15+", "label": "Years Experience" },
+      { "value": "50+", "label": "Countries Served" },
+      { "value": "500+", "label": "Product Models" },
+      { "value": "OEM/ODM", "label": "Custom Service" }
+    ],
+    "learnMore": "Learn More"
+  },
+  "contact": {
+    "title": "Get In Touch",
+    "subtitle": "Ready to discuss your audio needs? Contact us today.",
+    "name": "Your Name",
+    "email": "Email Address",
+    "message": "Your Message",
+    "send": "Send Message",
+    "info": {
+      "address": "No.88 Industrial Ave, Guangzhou, Guangdong, China",
+      "phone": "+86 020-1234-5678",
+      "emailAddr": "info@soundcore-audio.com",
+      "hours": "Mon–Fri: 9:00 AM – 6:00 PM (CST)"
+    }
+  },
+  "footer": {
+    "desc": "Professional audio equipment manufacturer. Trusted by professionals worldwide.",
+    "links": "Quick Links",
+    "copyright": "© 2024 SoundCore Audio. All rights reserved."
+  },
+  "aboutPage": {
+    "hero": "About SoundCore Audio",
+    "heroSub": "Your trusted partner for professional audio solutions",
+    "story": "Our Story",
+    "storyText1": "SoundCore Audio was established in 2009 in Guangzhou, China, with a mission to deliver world-class audio equipment at competitive prices.",
+    "storyText2": "Our product range covers professional speakers, subwoofers, amplifiers, line arrays, and complete PA systems for 50+ countries.",
+    "storyText3": "With ISO 9001 certification and CE/FCC/RoHS compliance, every product meets international quality standards.",
+    "factory": "Our Factory",
+    "factoryItems": [
+      "20,000 m² modern manufacturing facility",
+      "Advanced acoustic testing laboratory",
+      "Automated SMT production lines",
+      "Strict QC with 100% burn-in testing",
+      "OEM/ODM capability for custom branding"
+    ],
+    "whyUs": "Why Choose Us",
+    "whyItems": [
+      { "title": "R&D Driven", "desc": "50+ engineers dedicated to acoustic innovation" },
+      { "title": "Quality First", "desc": "ISO 9001 certified, CE/FCC/RoHS compliant" },
+      { "title": "Global Reach", "desc": "Serving 50+ countries with reliable logistics" },
+      { "title": "Custom Service", "desc": "Full OEM/ODM support for your brand" }
+    ]
+  },
+  "productsPage": {
+    "hero": "Our Products",
+    "heroSub": "Complete range of professional audio equipment",
+    "all": "All",
+    "speakers": "Speakers",
+    "amplifiers": "Amplifiers",
+    "systems": "Systems"
+  },
+  "contactPage": {
+    "hero": "Contact Us",
+    "heroSub": "We'd love to hear from you",
+    "formTitle": "Send Us a Message",
+    "infoTitle": "Contact Information",
+    "subject": "Subject",
+    "company": "Company Name",
+    "send": "Send Message",
+    "success": "Message sent! We'll reply within 24 hours.",
+    "faqTitle": "FAQ",
+    "faqs": [
+      { "q": "Do you offer OEM/ODM services?", "a": "Yes, full OEM/ODM support including custom branding and packaging." },
+      { "q": "What is your MOQ?", "a": "Generally 50–100 units for standard models, lower for OEM orders." },
+      { "q": "What certifications do you have?", "a": "CE, FCC, RoHS, and ISO 9001 certifications." },
+      { "q": "What is the lead time?", "a": "Standard: 15–25 days. OEM/custom: 30–45 days." }
+    ]
+  }
+}

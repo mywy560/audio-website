@@ -3,6 +3,7 @@ import { useTranslations, useLocale } from 'next-intl';
 import Link from 'next/link';
 import { usePathname, useRouter } from 'next/navigation';
 import { useState } from 'react';
+import Image from 'next/image';
 
 export default function Navbar() {
   const t = useTranslations('nav');
@@ -25,13 +26,9 @@ export default function Navbar() {
     <nav className="fixed top-0 w-full z-50 bg-black/80 backdrop-blur-xl border-b border-white/10">
       <div className="max-w-7xl mx-auto px-6 lg:px-8 flex items-center justify-between h-20">
         {/* Logo */}
-        <Link href={`/${locale}`} className="group flex items-center gap-3 text-white font-bold text-2xl tracking-tight">
-          <div className="relative w-10 h-10 bg-gradient-to-br from-blue-600 to-purple-600 rounded-xl flex items-center justify-center transform group-hover:rotate-12 transition-transform duration-300">
-            <span className="text-xl">🔊</span>
-            <div className="absolute inset-0 border-2 border-blue-400/30 rounded-xl group-hover:border-blue-400/50 transition-colors" />
-          </div>
-          <span className="bg-gradient-to-r from-white to-gray-300 bg-clip-text text-transparent">
-            SoundCore
+        <Link href={`/${locale}`} aria-label="SOLVEX home" className="group flex items-center">
+          <span className="flex h-11 w-40 items-center rounded-lg bg-white px-2 py-1 transition-transform duration-300 group-hover:scale-[1.03]">
+            <Image src="/logo.png" alt="SOLVEX" width={320} height={64} className="h-auto w-full object-contain" priority />
           </span>
         </Link>
 

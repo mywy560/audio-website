@@ -1,11 +1,12 @@
 import { useTranslations, useLocale } from 'next-intl';
 import Link from 'next/link';
+import Image from 'next/image';
 
 export default function HomePage() {
   const t = useTranslations();
   const locale = useLocale();
 
-  const products = t.raw('products.items') as { id: string; name: string; desc: string; tag: string }[];
+  const products = t.raw('products.items') as { id: string; name: string; desc: string; tag: string; image: string }[];
   const stats = t.raw('about.stats') as { value: string; label: string }[];
 
   return (
@@ -83,21 +84,9 @@ export default function HomePage() {
                 {/* 悬停效果背景 */}
                 <div className="absolute inset-0 bg-gradient-to-br from-blue-500/5 to-purple-500/5 opacity-0 group-hover:opacity-100 transition-opacity duration-500" />
                 
-                {/* 产品图标 */}
-                <div className="relative w-full h-48 bg-gradient-to-br from-gray-800 to-gray-700 rounded-xl mb-6 flex items-center justify-center overflow-hidden group-hover:from-blue-900/30 group-hover:to-purple-900/30 transition-all duration-500">
-                  <div className="text-6xl transform group-hover:scale-110 transition-transform duration-500">
-                    🔊
-                  </div>
-                  {/* 音频波形动画 */}
-                  <div className="absolute bottom-0 left-0 right-0 h-2 flex justify-center gap-1 opacity-0 group-hover:opacity-100 transition-opacity duration-500">
-                    {[1, 2, 3, 4, 5, 4, 3, 2, 1].map((height, i) => (
-                      <div 
-                        key={i}
-                        className="w-1 bg-gradient-to-t from-blue-400 to-cyan-400 rounded-t-full"
-                        style={{ height: `${height * 4}px` }}
-                      />
-                    ))}
-                  </div>
+                {/* Product image */}
+                <div className="relative w-full h-48 bg-white rounded-xl mb-6 overflow-hidden">
+                  <Image src={item.image} alt={item.name} fill sizes="(max-width: 640px) 100vw, (max-width: 1024px) 50vw, 33vw" className="object-contain p-3 transition-transform duration-500 group-hover:scale-105" />
                 </div>
                 
                 {/* 产品信息 */}

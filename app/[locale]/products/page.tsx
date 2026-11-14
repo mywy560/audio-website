@@ -1,17 +1,9 @@
-import { useTranslations, useLocale } from 'next-intl';
-
-const ICONS: Record<string, string> = {
-  'pro-speaker': '🔊',
-  'subwoofer': '🔉',
-  'amplifier': '⚡',
-  'column-speaker': '📻',
-  'monitor': '🎚️',
-  'pa-system': '🎤',
-};
+import { useTranslations } from 'next-intl';
+import Image from 'next/image';
 
 export default function ProductsPage() {
   const t = useTranslations();
-  const products = t.raw('products.items') as { id: string; name: string; desc: string; tag: string }[];
+  const products = t.raw('products.items') as { id: string; name: string; desc: string; tag: string; image: string; gallery: string[] }[];
 
   return (
     <div className="min-h-screen">
@@ -26,8 +18,8 @@ export default function ProductsPage() {
         <div className="max-w-7xl mx-auto grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6">
           {products.map((item) => (
             <div key={item.id} className="bg-gray-900 border border-white/10 rounded-xl overflow-hidden hover:border-blue-500/50 transition-colors">
-              <div className="h-48 bg-gradient-to-br from-gray-800 to-gray-700 flex items-center justify-center text-6xl">
-                {ICONS[item.id] ?? '🔊'}
+              <div className="relative h-64 bg-white p-4">
+                <Image src={item.image} alt={item.name} fill sizes="(max-width: 640px) 100vw, (max-width: 1024px) 50vw, 33vw" className="object-contain p-4" />
               </div>
               <div className="p-6">
                 <div className="flex items-center gap-2 mb-2">
@@ -39,6 +31,13 @@ export default function ProductsPage() {
                   )}
                 </div>
                 <p className="text-gray-400 text-sm">{item.desc}</p>
+                <div className="mt-4 grid grid-cols-5 gap-2" aria-label={`${item.name} product views`}>
+                  {item.gallery.map((src, index) => (
+                    <div key={src} className="relative aspect-square overflow-hidden rounded-md bg-white">
+                      <Image src={src} alt={`${item.name} view ${index + 1}`} fill sizes="80px" className="object-contain p-1" />
+                    </div>
+                  ))}
+                </div>
               </div>
             </div>
           ))}

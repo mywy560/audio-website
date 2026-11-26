@@ -81,8 +81,9 @@ body {
 .text-link:hover { color:#b86f42; border-color:#b86f42; }
 .featured-grid { display:grid; grid-template-columns:repeat(4,minmax(0,1fr)); gap:18px; }
 .featured-card { min-width:0; color:inherit; text-decoration:none; }
-.featured-image { position:relative; height:300px; overflow:hidden; background:#e9e8e3; }
-.featured-image img { padding:28px; transition:transform .45s ease; }
+.featured-image { position:relative; height:340px; overflow:hidden; background:radial-gradient(ellipse at 50% 45%,#fff 0%,#f5f3ee 58%,#e9e6de 100%); }
+.featured-image:after { content:""; position:absolute; inset:auto 12% 10px; height:22px; border-radius:50%; background:rgba(27,29,26,.09); filter:blur(15px); }
+.featured-image img { padding:18px; transform:scale(1.1); transition:transform .45s ease; mix-blend-mode:multiply; }
 .featured-card:hover .featured-image img { transform:scale(1.05); }
 .card-number { position:absolute; top:15px; left:16px; color:#727570; font-size:10px; letter-spacing:.1em; }
 .card-arrow { position:absolute; right:14px; bottom:13px; display:grid; place-items:center; width:34px; height:34px; background:#f8f7f4; color:#333; }
@@ -119,8 +120,8 @@ body {
 .showcase-card video { display:block; width:100%; aspect-ratio:16/9; object-fit:cover; background:#111; }
 .showcase-caption { display:flex; align-items:center; justify-content:space-between; padding:13px 16px; color:#f5f4f0; font-size:9px; letter-spacing:.15em; }
 .showcase-caption span:last-child { color:#d89568; font-size:16px; }
-@media(max-width:900px) { .featured-grid { grid-template-columns:repeat(2,minmax(0,1fr)); } .featured-image { height:280px; } .about-inner { gap:38px; } }
-@media(max-width:640px) { .home-hero { min-height:690px; } .home-hero-content { padding:135px 24px 110px; } .home-hero-shade { background:linear-gradient(90deg,rgba(8,12,10,.83),rgba(8,12,10,.34)),linear-gradient(0deg,rgba(8,12,10,.6),transparent 50%); } .home-hero h1 { font-size:48px; } .hero-copy { font-size:15px; } .hero-caption { margin-top:58px; } .hero-scroll { right:20px; bottom:24px; } .home-section { padding:68px 22px; } .section-heading { align-items:start; flex-direction:column; margin-bottom:26px; } .section-heading h2,.about-intro h2,.contact-band h2 { font-size:36px; } .featured-grid { gap:22px 12px; } .featured-image { height:205px; } .featured-image img { padding:18px; } .featured-info { min-height:96px; flex-direction:column; gap:7px; padding-top:12px; } .featured-info h3 { font-size:13px; } .featured-info p { font-size:11px; } .case-grid { grid-template-columns:1fr; gap:24px; } .case-image { height:240px; } .about-inner { padding:68px 22px; grid-template-columns:1fr; gap:36px; } .stat-item { min-height:98px; padding:17px; } .stat-item strong { font-size:27px; } .contact-band { padding:70px 20px; } .showcase-grid { grid-template-columns:1fr; gap:14px; } }
+@media(max-width:900px) { .featured-grid { grid-template-columns:repeat(2,minmax(0,1fr)); } .featured-image { height:320px; } .about-inner { gap:38px; } }
+@media(max-width:640px) { .home-hero { min-height:690px; } .home-hero-content { padding:135px 24px 110px; } .home-hero-shade { background:linear-gradient(90deg,rgba(8,12,10,.83),rgba(8,12,10,.34)),linear-gradient(0deg,rgba(8,12,10,.6),transparent 50%); } .home-hero h1 { font-size:48px; } .hero-copy { font-size:15px; } .hero-caption { margin-top:58px; } .hero-scroll { right:20px; bottom:24px; } .home-section { padding:68px 22px; } .section-heading { align-items:start; flex-direction:column; margin-bottom:26px; } .section-heading h2,.about-intro h2,.contact-band h2 { font-size:36px; } .featured-grid { gap:22px 12px; } .featured-image { height:250px; } .featured-image img { padding:12px; transform:scale(1.06); } .featured-info { min-height:96px; flex-direction:column; gap:7px; padding-top:12px; } .featured-info h3 { font-size:13px; } .featured-info p { font-size:11px; } .case-grid { grid-template-columns:1fr; gap:24px; } .case-image { height:240px; } .about-inner { padding:68px 22px; grid-template-columns:1fr; gap:36px; } .stat-item { min-height:98px; padding:17px; } .stat-item strong { font-size:27px; } .contact-band { padding:70px 20px; } .showcase-grid { grid-template-columns:1fr; gap:14px; } }
 
 a, button { -webkit-tap-highlight-color: transparent; }
 button { cursor: pointer; }

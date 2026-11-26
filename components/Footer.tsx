@@ -30,8 +30,8 @@ export default function Footer() {
         <div>
           <div className="text-white font-semibold mb-3">{nav('contact')}</div>
           <ul className="space-y-2 text-sm">
-            <li>📧 {ct('info.emailAddr')}</li>
-            <li>📞 {ct('info.phone')}</li>
+            <li>📧 <a href={`mailto:${ct('info.emailAddr')}`} className="hover:text-white">{ct('info.emailAddr')}</a></li>
+            {ct('info.phone') && <li>📞 {ct('info.phone')}</li>}
             <li>📍 {ct('info.address')}</li>
           </ul>
         </div>

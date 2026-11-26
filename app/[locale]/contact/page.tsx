@@ -113,8 +113,8 @@ export default function ContactPage() {
             <h2 className="text-2xl font-bold mb-6">{t('infoTitle')}</h2>
             <ul className="space-y-4 text-gray-400 mb-10">
               <li className="flex gap-3"><span>📍</span>{ct('info.address')}</li>
-              <li className="flex gap-3"><span>📞</span>{ct('info.phone')}</li>
-              <li className="flex gap-3"><span>📧</span>{ct('info.emailAddr')}</li>
+              {ct('info.phone') && <li className="flex gap-3"><span>📞</span>{ct('info.phone')}</li>}
+              <li className="flex gap-3"><span>📧</span><a className="hover:text-white transition-colors" href={`mailto:${ct('info.emailAddr')}`}>{ct('info.emailAddr')}</a></li>
               <li className="flex gap-3"><span>🕐</span>{ct('info.hours')}</li>
             </ul>
 

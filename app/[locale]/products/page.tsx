@@ -1,48 +1,45 @@
-import { useTranslations } from 'next-intl';
+import { useTranslations, useLocale } from 'next-intl';
 import Image from 'next/image';
+import Link from 'next/link';
 
 export default function ProductsPage() {
   const t = useTranslations();
+  const locale = useLocale();
   const products = t.raw('products.items') as { id: string; name: string; desc: string; tag: string; image: string; gallery: string[] }[];
 
   return (
-    <div className="min-h-screen">
-      {/* Hero */}
-      <section className="relative overflow-hidden pt-36 pb-20 px-6 text-center border-b border-white/10 bg-[radial-gradient(ellipse_at_50%_0%,rgba(249,115,22,.16),transparent_55%),#0b0f13]">
-        <div className="text-orange-400 text-xs tracking-[0.24em] uppercase mb-4">SOLVEX / Lighting collection</div>
-        <h1 className="text-4xl md:text-6xl font-semibold tracking-tight mb-5">{t('productsPage.hero')}</h1>
-        <p className="text-gray-400 text-base md:text-lg">{t('productsPage.heroSub')}</p>
+    <div className="min-h-screen product-catalog">
+      <section className="catalog-hero">
+        <div className="catalog-hero-inner">
+          <p className="eyebrow">SOLVEX LIGHTING / COLLECTION 2026</p>
+          <h1>{t('productsPage.hero')}</h1>
+          <p>{t('productsPage.heroSub')}</p>
+          <div className="catalog-count"><span>08</span> {locale === 'zh' ? '个专业灯具系列' : 'professional fixture series'}</div>
+        </div>
       </section>
 
-      {/* Grid */}
-      <section className="py-16 px-6">
-        <div className="max-w-7xl mx-auto grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-5">
-          {products.map((item) => (
-            <div key={item.id} className="group bg-[#11161c] border border-white/[0.08] rounded-2xl overflow-hidden hover:border-orange-400/40 hover:-translate-y-1 transition-all duration-300">
-              <div className="relative h-72 bg-white p-4">
-                <Image src={item.image} alt={item.name} fill sizes="(max-width: 640px) 100vw, (max-width: 1024px) 50vw, 33vw" className="object-contain p-5 transition-transform duration-500 group-hover:scale-[1.04]" />
+      <section className="catalog-section">
+        <div className="catalog-toolbar"><span>{locale === 'zh' ? '产品系列' : 'PRODUCT SERIES'}</span><span>{String(products.length).padStart(2, '0')} / {locale === 'zh' ? '全部产品' : 'ALL PRODUCTS'}</span></div>
+        <div className="catalog-grid">
+          {products.map((item, index) => (
+            <article key={item.id} id={item.id} className="catalog-card">
+              <div className="catalog-image">
+                <Image src={item.image} alt={item.name} fill sizes="(max-width: 700px) 100vw, (max-width: 1100px) 50vw, 33vw" className="catalog-main-image" />
+                <span className="catalog-index">SERIES / {String(index + 1).padStart(2, '0')}</span>
+                {item.tag && <span className="catalog-tag">{item.tag}</span>}
               </div>
-              <div className="p-5">
-                <div className="flex items-center gap-2 mb-2">
-                  <h3 className="font-semibold text-base leading-snug">{item.name}</h3>
-                  {item.tag && (
-                    <span className="text-xs bg-orange-400/10 text-orange-300 border border-orange-400/20 px-2 py-0.5 rounded-full">
-                      {item.tag}
-                    </span>
-                  )}
-                </div>
-                <p className="text-gray-400 text-sm leading-relaxed min-h-10">{item.desc}</p>
-                <div className="mt-5 flex gap-2 overflow-x-auto pb-1" aria-label={`${item.name} product views`}>
-                  {item.gallery.map((src, index) => (
-                    <div key={src} className="relative h-14 w-14 shrink-0 overflow-hidden rounded-lg bg-white ring-1 ring-white/10">
-                      <Image src={src} alt={`${item.name} view ${index + 1}`} fill sizes="56px" className="object-contain p-1" />
-                    </div>
-                  ))}
+              <div className="catalog-card-body">
+                <div className="catalog-title-row"><div><p className="catalog-model">{item.id.replaceAll('-', ' ').toUpperCase()}</p><h2>{item.name}</h2></div><span className="catalog-link-mark">↗</span></div>
+                <p className="catalog-description">{item.desc}</p>
+                <div className="catalog-gallery" aria-label={`${item.name} product views`}>
+                  {item.gallery.map((src, viewIndex) => <div className="catalog-thumb" key={src}><Image src={src} alt={`${item.name} view ${viewIndex + 1}`} fill sizes="72px" /><span>0{viewIndex + 1}</span></div>)}
+                  <span className="view-count">{item.gallery.length} {locale === 'zh' ? '张产品图' : 'VIEWS'}</span>
                 </div>
               </div>
-            </div>
+            </article>
           ))}
         </div>
+        <div className="catalog-cta"><p>{locale === 'zh' ? '需要产品规格或方案建议？' : 'Looking for specifications or a lighting solution?'}</p><Link href={`/${locale}/contact`}>{t('nav.contact')} <span>↗</span></Link></div>
       </section>
     </div>
   );

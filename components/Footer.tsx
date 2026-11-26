@@ -1,5 +1,6 @@
 import { useTranslations, useLocale } from 'next-intl';
 import Link from 'next/link';
+import Image from 'next/image';
 
 export default function Footer() {
   const t = useTranslations('footer');
@@ -9,9 +10,9 @@ export default function Footer() {
 
   return (
     <footer className="bg-gray-950 text-gray-400 border-t border-white/10">
-      <div className="max-w-7xl mx-auto px-6 py-12 grid grid-cols-1 md:grid-cols-3 gap-8">
+      <div className="max-w-7xl mx-auto px-6 py-14 grid grid-cols-1 md:grid-cols-3 gap-10">
         <div>
-          <div className="text-white font-bold text-xl mb-3">🔊 SoundCore</div>
+          <div className="mb-4 inline-flex rounded-md bg-white px-2 py-1.5"><Image src="/logo.png" alt="SOLVEX" width={160} height={32} className="h-7 w-36 object-contain" /></div>
           <p className="text-sm leading-relaxed">{t('desc')}</p>
         </div>
         <div>
@@ -19,7 +20,7 @@ export default function Footer() {
           <ul className="space-y-2 text-sm">
             {(['home', 'products', 'about', 'contact'] as const).map((key) => (
               <li key={key}>
-                <Link href={`/${locale}${key === 'home' ? '' : '/' + key}`} className="hover:text-white transition-colors">
+                <Link href={`/${locale}${key === 'home' ? '' : '/' + key}`} className="hover:text-orange-300 transition-colors">
                   {nav(key)}
                 </Link>
               </li>

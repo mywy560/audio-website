@@ -1,4 +1,4 @@
-import { useTranslations, useLocale } from 'next-intl';
+import { getTranslations } from 'next-intl/server';
 import Image from 'next/image';
 import Link from 'next/link';
 
@@ -15,7 +15,7 @@ export default async function ProductDetailPage({ params }: { params: Promise<{ 
   const product = products.find((item) => item.id === slug);
   if (!product) return <main className="product-not-found"><h1>Product not found</h1><Link href={`/${locale}/products`}>← {messages.nav.products}</Link></main>;
 
-  const t = useTranslations();
+  const t = await getTranslations({locale});
   const isK1 = product.id === 'k1-led';
   const specifications = locale === 'zh'
     ? [['模式', '光束 / 图案 / 染色'], ['混色', 'CMY 混色系统'], ['色温', '独立 CTO 调节'], ['控制', 'DMX512 / RDM']]
